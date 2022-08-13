@@ -1,0 +1,5 @@
+AddType application/x-httpd-php5 .php
+<IfModule php5_module>
+    php_flag session.cookie_httponly on
+</IfModule>
+

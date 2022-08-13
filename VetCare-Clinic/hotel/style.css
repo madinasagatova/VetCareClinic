@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    border: none;
+    text-transform: none;
+    text-decoration: none;
+    transition: .2s linear;
+    
+}
+h1{
+    font-size: 50px;
+    line-height: 64px;
+    color: #222;
+}
+h2{
+    font-size: 46px;
+    line-height: 54px;
+    color: #222;
+}
+h4{
+    font-size: 30px;
+    color: #222;
+}
+h6{
+    font-weight: 700;
+    font-size: 12px;
+}
+p{
+    font-size: 16px;
+    color: #456b52;
+    margin: 15px 0 20px 0;
+}
+.section-p1{
+    padding: 20px 80px;
+}
+.section-m1{
+    margin: 20px 0;
+}
+body{
+    width: 100%;
+    
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 4rem;
+    color: #fff;
+    background-color: #eee;
+}
+html::-webkit-scrollbar{
+    width: 0.8rem;
+}
+html::-webkit-scrollbar-track{
+    background: transparent;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+html::-webkit-scrollbar-thumb{
+    background-color: rgb(110, 172, 180);
+    border-radius: 1rem;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: rgb(99, 95, 96);
+    padding: 15px 80px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 5px 16px rgba(0, 0, 0, 0.06);
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+
+#navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*list element - parent tag*/
+#navbar li{
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+}
+#navbar li a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+    transition: 0.3s ease;
+}
+#navbar li a:hover,
+#navbar li a.active{
+    color: rgb(41, 122, 133);
+}
+/*sudo class*/
+#navbar li a.active::after,
+#navbar li a:hover::after{
+    content: "";
+    width: 30%;
+    height: 2px;
+    background-color: rgb(252, 213, 233);
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+#hero{
+    background-image: url("/img/hotel.jpg");
+    height: 85vh;
+    width: 100%;
+    background-size: cover;
+    background-position: top 25% right 0;
+    padding: 0 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-content: center;
+}
+#hero h4{
+    padding-bottom: 15px;
+
+}
+#hero h1{
+    color: azure;
+}
+#hero button{
+    
+    background-color: rgb(235, 198, 252); 
+    color: rgb(61, 44, 53);
+    border: 6px;
+    padding: 15px 50px 15px 40px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    font-weight: 800;
+    font-size: 20px;
+}
+#services{
+    text-align: center;
+    margin-top: 30px;
+    background-color: #fff;
+    
+}
+#services h1, h6{
+    color: #1a1a1a;
+}
+
+#services .boxes{
+
+width: 300px;
+text-align: center;
+padding: 25px 15px;
+box-shadow: 20px 20px 50px rgb(rgb(15, 15, 15));
+border: 2px solid rgb(252, 213, 233);
+border-radius: 30px;
+border-collapse: separate;
+border-spacing: 30px;
+margin: 30px 15px;
+display: inline-block;
+gap: 15px 6rem;
+align-items: stretch;
+
+}
+#services .boxes div{
+    width: auto;  
+text-align: center;  
+padding: 15px;  
+}
+#services img{
+    width: 250px;
+    
+}
+#services .boxes:hover{
+    box-shadow: 10px 10px 54px rgb(0, 0, 0); 
+    
+}
+    @keyframes fadeIn{
+        0%{
+            transform: translateY(4rem);
+            opacity: 0;
+        }
+    }
+    /*media queries*/
+    @media(max-width:991px){
+        html{
+            font-size: 55%;
+        }
+        #header{
+            padding: 2rem;
+        }
+        
+    }
+    @media(max-width:768px){
+        
+            #navbar li {
+               position: absolute;
+               top:99%; left: 0; right: 0;
+               background: white;
+               clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+               
+            }
+            #navbar :active{
+                
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+             }
+    
+             .a{
+                display: block;
+                margin: 2rem;
+                font-size: 2rem;
+            }
+            #menu-btn{
+                display: inline-block;
+            }
+            .product-display {
+                overflow-y: scroll;
+            }
+            .product-display .product-display-table{
+                width: 80rem;
+            }
+    
+        }
+        
+    
+    @media(max-width:450px){
+        #menu-btn{
+            display: inline-block;
+        }
+        html{
+            font-size: 50%;
+        }
+        
+    }
+.form-container{
+        
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        padding-bottom: 60px;
+        background: #eee;
+        
+    }
+.form-container form{
+        padding: 80px;
+        width: 100%;
+        border-radius: 30px;
+        box-shadow: 0 5px 10px rgb(110, 172, 180); 
+        background: #fff;
+        text-align: center;
+    }
+.form-container form h3{
+        font-size: 30px;
+        margin-bottom: 10px;
+        display: grid;
+        margin-top: 1rem;
+        padding: .8rem 2.8rem;
+        border-radius: 5rem;
+        background: rgb(240, 117, 36);
+        color: rgb(0, 0, 0);
+        text-transform: capitalize;
+        overflow: visible;
+        z-index: 0;
+        position: relative;
+    }
+    .form-container form input,
+    .form-container form select{
+        width: 100%;
+        padding: 10px 15px;
+        font-size: 13px;
+        margin: 8px 0;
+        background: #eee;
+        border-radius: 5px;
+    }
+   
+    .form-container form option{
+        background: #fff;
+    }
+    .form-container form span{
+        width: 100%;
+        font-size: 13px;
+    }
+    .form-container form textarea{
+        width: 100%;
+        font-size: 13px;
+    }
+    .form-container form button{
+        display: inline-block;
+        margin-top: 1rem;
+        padding: .8rem 2.8rem;
+        border-radius: 5rem;
+        border-top-left-radius: 0;
+        background: rgb(240, 117, 36);
+        color: rgb(0, 0, 0);
+        text-transform: capitalize;
+        font-size: 1.7rem;
+        cursor: pointer;
+        overflow: hidden;
+        z-index: 0;
+        position: relative;
+    }
+    
+   
+    #message .message{
+        visibility: hidden;
+  width: 160px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+    }
